@@ -1,0 +1,28 @@
+/* Correct usage of calc() */
+#element1 {
+  width: calc(50% - 10px);
+}
+
+#element2 {
+  width: calc(100% - (20px + 10px));
+}
+
+/* Correctly nested calc() expression */
+#element3 {
+  width: calc(50% - calc(10px + 5px));
+}
+
+/* Avoid errors by adding spaces around operators */
+#element4 {
+  height: calc(100vh - 100px);
+}
+
+/*  Avoid this incorrect syntax: */
+/* #element5 {
+  width: calc(50%-10px); Incorrect!
+} */
+/* #element6 {
+  width: calc(100%-(20px+10px)); Incorrect!
+} */
+
+/* Avoid deeply nested calc expressions, for maintainability and browser compatibility */
